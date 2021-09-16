@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page_layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/PageLayout/etc/layouts.xsd">
+    <layout id="custom_2-columns-right">
+        <label translate="true">Custom 2 Columns Right</label>
+    </layout>
+    <layout id="custom-layout">
+        <label translate="true">Custom Layout</label>
+    </layout>
+</page_layouts>

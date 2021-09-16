@@ -1,0 +1,28 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php if ($crumbs && is_array($crumbs)) : ?>
+    <div class="breadcrumbs">
+        <ul class="items this-is-template-from-theme">
+            <?= var_dump($crumbs); die();?>
+            <?php foreach ($crumbs as $crumbName => $crumbInfo) : ?>
+                <?= var_dump($crumbs); die();?>
+                <li class="item <?= $block->escapeHtmlAttr($crumbName) ?>">
+                    <?php if ($crumbInfo['link']) : ?>
+                        <a href="<?= $block->escapeUrl($crumbInfo['link']) ?>"
+                           title="<?= $block->escapeHtmlAttr($crumbInfo['title']) ?>">
+                            <?= $block->escapeHtml($crumbInfo['label']) ?>
+                        </a>
+                    <?php elseif ($crumbInfo['last']) : ?>
+                        <strong><?= $block->escapeHtml($crumbInfo['label']) ?></strong>
+                    <?php else : ?>
+                        <?= $block->escapeHtml($crumbInfo['label']) ?>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>

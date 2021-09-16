@@ -8,7 +8,6 @@
     <div class="breadcrumbs">
         <ul class="items this-is-template-from-theme">
             <?php foreach ($crumbs as $crumbName => $crumbInfo) : ?>
-                <?= var_dump($crumbs); die();?>
                 <li class="item <?= $block->escapeHtmlAttr($crumbName) ?>">
                     <?php if ($crumbInfo['link']) : ?>
                         <a href="<?= $block->escapeUrl($crumbInfo['link']) ?>"

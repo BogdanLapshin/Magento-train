@@ -3,4 +3,7 @@
     <layout id="custom_2-columns-right">
         <label translate="true">Custom 2 Columns Right</label>
     </layout>
+    <layout id="custom-layout">
+        <label translate="true">Custom Layout</label>
+    </layout>
 </page_layouts>

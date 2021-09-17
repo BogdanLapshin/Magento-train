@@ -6,4 +6,7 @@
     <layout id="custom-layout">
         <label translate="true">Custom Layout</label>
     </layout>
+    <layout id="php-layout">
+        <label translate="true">PHP layout</label>
+    </layout>
 </page_layouts>

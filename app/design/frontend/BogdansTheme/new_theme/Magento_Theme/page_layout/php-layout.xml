@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <container name="render-info" htmlTag="div" htmlClass="render-info">
+        <block class="Magento\Framework\View\Element\Template" name="block_2" template="Magento_Theme::render-php.phtml"></block>
+    </container>
+</layout>

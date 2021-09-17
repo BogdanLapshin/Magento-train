@@ -1,0 +1,52 @@
+<?php
+    $arr = [
+        [
+            'year'=>'2021',
+            'month'=> '6',
+            'day' => '11',
+            'hours' => '11',
+            'minutes'=>'43',
+            'seconds'=>'10'
+        ],
+        [
+            'year'=>'2020',
+            'month'=> '6',
+            'day' => '6',
+            'hours' => '4',
+            'minutes'=>'20',
+            'seconds'=>'2'
+        ],
+        [
+            'year'=>'2029',
+            'month'=> '3',
+            'day' => '25',
+            'hours' => '16',
+            'minutes'=>'00',
+            'seconds'=>'12'
+        ],
+        [
+            'year'=>'2021',
+            'month'=> '6',
+            'day' => '10',
+            'hours' => '12',
+            'minutes'=>'30',
+            'seconds'=>'12'
+        ]
+    ];
+    $counter = 0;
+    foreach ($arr as $arr_vallue): ?>
+        <ul>
+            <?php if($counter==3):?>
+                <?php  foreach ($arr_vallue as $key=>$value): ?>
+                    <li><?php echo($key." - ".$value)?></li>
+                <?php endforeach; ?>
+
+            <?php else : ?>
+                <?php foreach ($arr_vallue as $key=>$value): ?>
+                    <li><?php echo($value." - ".$key)?></li>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </ul>
+        <?php $counter++ ?>
+    <?php endforeach; ?>
+

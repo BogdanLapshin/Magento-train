@@ -3,7 +3,8 @@ var config = {
     map: {
         '*': {
             objectCreator: 'Magento_Theme/js/object-creator',
-            objectEditor: 'Magento_Theme/js/object-editor'
+            objectEditor: 'Magento_Theme/js/object-editor',
+            customUiComponent: `Magento_Theme/js/ui-component`
         }
     },
     config: {

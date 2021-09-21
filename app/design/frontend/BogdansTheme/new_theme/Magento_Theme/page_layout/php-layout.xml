@@ -11,6 +11,5 @@
                 <argument name="field_2" xsi:type="number">100</argument>
             </arguments>
         </block>
-
     </container>
 </layout>

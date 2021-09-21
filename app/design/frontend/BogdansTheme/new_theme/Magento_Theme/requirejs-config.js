@@ -5,5 +5,12 @@ var config = {
             objectCreator: 'Magento_Theme/js/object-creator',
             objectEditor: 'Magento_Theme/js/object-editor'
         }
+    },
+    config: {
+        mixins: {
+            'Magento_Theme/js/object-creator': {
+                'Magento_Theme/js/object-creator-mixin': true
+            }
+        }
     }
 }

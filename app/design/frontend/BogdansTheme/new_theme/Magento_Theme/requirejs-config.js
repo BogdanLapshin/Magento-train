@@ -1,3 +1,4 @@
+/*------Requirejs-config------*/
 var config = {
     map: {
         '*': {

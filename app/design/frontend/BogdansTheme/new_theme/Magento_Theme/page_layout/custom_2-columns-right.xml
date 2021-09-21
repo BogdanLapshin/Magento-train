@@ -6,6 +6,6 @@
             <container name="nav.panel" as="nav-panel" htmlTag="nav" htmlClass="navpanel" before="-"/>
         </referenceContainer>
         <container name="aside__block" as="aside" after="main.content" htmlTag="aside" htmlClass="aside__block"/>
-        <block class="Magento\Framework\View\Element\Template" name="block.3" template="Magento_Theme::rendering-args.phtml"/>
+        <block class="Magento\Framework\View\Element\Template" name="block.3" template="Magento_Theme::rendering-args.phtml"/> <!---Block with js-->
     </referenceContainer>
 </layout>

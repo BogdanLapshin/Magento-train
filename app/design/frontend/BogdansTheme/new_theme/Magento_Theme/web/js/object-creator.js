@@ -3,7 +3,7 @@ define([
 ], function() {
     return {
         name: "Car",
-        price: 2000,
+        price: 20000,
         setPrice(newprice) {
             this.name = newprice;
         }

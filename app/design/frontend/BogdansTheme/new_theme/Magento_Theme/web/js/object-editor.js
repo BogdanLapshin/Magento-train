@@ -1,5 +1,5 @@
 define(['objectCreator'
 ], function(objectCreator) {
-    objectCreator["speed"] = 10;
+    objectCreator["speed"] = 100;
     console.log(objectCreator);
 });

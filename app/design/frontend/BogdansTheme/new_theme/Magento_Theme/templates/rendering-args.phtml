@@ -4,10 +4,14 @@
 <script type="text/x-magento-init">
     {
         "*" :{
-           "objectEditor": {}
-        },
-        "*" :{
-            "customUiComponent": {}
+           "objectEditor": {},
+           "Magento_Ui/js/core/app": {
+                "components": {
+                    "ui-creator": {
+                        "component": "Magento_Theme/js/ui-creator"
+                    }
+                }
+           }
         }
     }
  </script>

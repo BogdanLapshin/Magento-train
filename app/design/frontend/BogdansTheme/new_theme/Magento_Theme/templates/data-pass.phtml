@@ -1,0 +1,15 @@
+<?php
+$name = $block->getData('data_pass');
+?>
+<div class="passing-data">
+    <?= $name ?>
+</div>
+<script type="text/x-magento-init">
+    {
+        ".passing-data" :{
+           "Magento_Theme/js/data-passing": {
+               "data": "<?= $name ?>"
+           }
+        }
+    }
+ </script>

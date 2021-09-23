@@ -1,9 +1,7 @@
-<?php
-/** @var Magento\Framework\View\Element\Template $block */?>
-<!-- Script -->
-<div data-bind="scope: 'ui-creator'">
-    <p data-bind="text: inputText()"></p>
+<div id="ui-rendering-xml" data-bind="scope:'ui-rendering-xml'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
 </div>
+<div class="test"></div>
 <script type="text/x-magento-init">
     {
         "*" :{
@@ -19,5 +17,3 @@
         }
     }
  </script>
-
-

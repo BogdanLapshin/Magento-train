@@ -1,10 +1,30 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <referenceContainer name="aside__block">
-        <block class="Magento\Framework\View\Element\Template" name="asidebar" template="Magento_Theme::aside.phtml"/>
-    </referenceContainer>
-    <referenceContainer name="nav.panel">
-        <block class="Magento\Framework\View\Element\Template" name="main.links" template="Magento_Theme::main-links.phtml"/>
-    </referenceContainer>
-    <referenceContainer name="container-1" remove="true"/>
+    <body>
+        <referenceContainer name="aside__block">
+            <block class="Magento\Framework\View\Element\Template" name="asidebar" template="Magento_Theme::aside.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="nav.panel">
+            <block class="Magento\Framework\View\Element\Template" name="main.links" template="Magento_Theme::main-links.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="container-1" remove="true"/>
+
+        <referenceContainer name="page.wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="ui.xml" template="Magento_Theme::ui-xml.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="ui-rendering-xml" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_Theme/js/ui-xml</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">Magento_Theme/ui-xml</item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+    </body>
 </page>

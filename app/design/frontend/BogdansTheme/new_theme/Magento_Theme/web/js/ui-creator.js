@@ -1,9 +1,13 @@
 define([
-    'uiComponent'
-], function (Component) {
+    'uiComponent',
+    'ko'
+], function (Component, ko) {
     'use strict';
 
     return Component.extend({
+        defaults: {
+            inputText: ko.observable('1')
+        },
         initialize: function () {
             this._super();
             console.log('It is a UI component!');

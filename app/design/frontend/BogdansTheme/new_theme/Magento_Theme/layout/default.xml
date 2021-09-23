@@ -26,5 +26,21 @@
             </block>
         </referenceContainer>
 
+        <referenceBlock name="minicart">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="types" xsi:type="array"/>
+                    <item name="components" xsi:type="array">
+                        <item name="minicart_content" xsi:type="array">
+                            <item name="config" xsi:type="array">
+                                <item name="template" xsi:type="string">Magento_Checkout/minicart/new-content</item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+
+        </referenceBlock>
+
     </body>
 </page>

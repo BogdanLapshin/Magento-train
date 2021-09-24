@@ -1,0 +1,36 @@
+.input-group__button{
+    background: transparent;
+    border: none;
+    outline: none;
+    &--increase{
+        &:before{
+            content: ">";
+            font-size: 30px;
+            color: red;
+        }
+    }
+    &--decrease{
+        &:before{
+            content: "<";
+            font-size: 30px;
+            color: red;
+        }
+    }
+}
+.input-group{
+    display: flex;
+    align-items: center;
+    input{
+        width: 50px;
+        margin: 0 10px;
+    }
+}
+
+.fieldset{
+    display: flex;
+    flex-direction: column;
+    .actions{
+        display: flex;
+
+    }
+}

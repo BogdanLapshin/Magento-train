@@ -15,5 +15,6 @@
                 <argument name="data_pass" xsi:type="string">Bogdan</argument>
             </arguments>
         </block>
+        <block class="Magento\Framework\View\Element\Template" name="widget.ext" template="Magento_Theme::jquery-widget-extending.phtml"/>
     </referenceContainer>
 </layout>

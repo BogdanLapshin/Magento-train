@@ -17,6 +17,9 @@ var config = {
             },
             'Magento_Theme/js/ui-creator': {
                 'Magento_Theme/js/ui-mixin': true
+            },
+            'Magento_Theme/js/jquery-widget': {
+                'Magento_Theme/js/jquery-widget-mixin': true
             }
         }
     }

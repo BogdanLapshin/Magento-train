@@ -6,6 +6,9 @@
             <container name="nav.panel" as="nav-panel" htmlTag="nav" htmlClass="navpanel" before="-"/>
         </referenceContainer>
         <container name="aside__block" as="aside" after="main.content" htmlTag="aside" htmlClass="aside__block"/>
+        <container name="img-wrapper"  after="aside__block" htmlTag="div" htmlClass="img-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="img-inner" template="Magento_Theme::img-inner.phtml"/>
+        </container>
         <block class="Magento\Framework\View\Element\Template" name="block.3" template="Magento_Theme::rendering-args.phtml"/> <!---Block with js-->
         <block class="Magento\Framework\View\Element\Template" name="data.pass.block" template="Magento_Theme::data-pass.phtml">
             <arguments>

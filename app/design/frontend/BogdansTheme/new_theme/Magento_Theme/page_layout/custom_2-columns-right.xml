@@ -17,5 +17,10 @@
         </block>
         <block class="Magento\Framework\View\Element\Template" name="widget.ext" template="Magento_Theme::jquery-widget-extending.phtml"/>
         <block class="Magento\Framework\View\Element\Template" name="cms.phtml" template="Magento_Theme::cms-phtml.phtml"/>
+        <block class="Magento\Cms\Block\Block" name="reviews">
+            <arguments>
+                <argument name="block_id" xsi:type="string">reviews</argument>
+            </arguments>
+        </block>
     </referenceContainer>
 </layout>

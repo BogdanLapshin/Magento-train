@@ -16,5 +16,6 @@
             </arguments>
         </block>
         <block class="Magento\Framework\View\Element\Template" name="widget.ext" template="Magento_Theme::jquery-widget-extending.phtml"/>
+        <block class="Magento\Framework\View\Element\Template" name="cms.phtml" template="Magento_Theme::cms-phtml.phtml"/>
     </referenceContainer>
 </layout>

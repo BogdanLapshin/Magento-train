@@ -13,20 +13,8 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 class CustCmsCreate implements DataPatchInterface
 {
-    /**
-     * ModuleDataSetupInterface
-     *
-     * @var ModuleDataSetupInterface
-     */
     private $moduleDataSetup;
-    /**
-     * @var PageFactory
-     */
     private $pageFactory;
-    /**
-     * @param ModuleDataSetupInterface $moduleDataSetup
-     * @param PageFactory $pageFactory
-     */
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         PageFactory $pageFactory

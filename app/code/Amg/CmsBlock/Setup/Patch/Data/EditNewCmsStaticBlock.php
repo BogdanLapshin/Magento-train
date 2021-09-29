@@ -43,6 +43,17 @@ class EditNewCmsStaticBlock implements DataPatchInterface, PatchVersionInterface
         if ($EditBlockId) {
             $EditBlock->setContent($EditBlockContent);
             $EditBlock->save();
+        } else {
+            $newCmsStaticBlock = [
+                'title' => 'Terms & Conditions',
+                'identifier' => 'mag-39-block',
+                'content' => '<div class="cms-terms">Cms Block Cms Page Patch</div>',
+                'is_active' => 1,
+                'stores' => \Magento\Store\Model\Store::DEFAULT_STORE_ID
+            ];
+            $block = $this->blockFactory->create();
+            $block->setData($newCmsStaticBlock)->save();
+
         }
 
         $this->moduleDataSetup->endSetup();

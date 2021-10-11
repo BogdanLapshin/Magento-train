@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="checkout" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceContainer name="content">
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="shipping-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="shippingAddress" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="customer-email" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="before-login-form" xsi:type="array">
+                                                                    <item name="children" xsi:type="array">
+                                                                        <item name="birthday-field" xsi:type="array">
+                                                                            <item name="component" xsi:type="string">Magento_Checkout/js/birthday-field</item>
+                                                                            <item name="config" xsi:type="array">
+                                                                                <item name="template" xsi:type="string">Magento_Checkout/birthday-field</item>
+                                                                            </item>
+                                                                        </item>
+                                                                        <item name="month-field" xsi:type="array">
+                                                                            <item name="component" xsi:type="string">Magento_Checkout/js/month-field</item>
+                                                                            <item name="config" xsi:type="array">
+                                                                                <item name="template" xsi:type="string">Magento_Checkout/month-field</item>
+                                                                            </item>
+                                                                        </item>
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </referenceContainer>
+    <referenceContainer name="page.messages" remove="true"/>
+</body>
+</page>

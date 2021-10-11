@@ -50,15 +50,5 @@ module.exports = {
             'css/styles'
         ],
         dsl: 'less'
-    },
-    new_theme: {
-        area: 'frontend',
-        name: 'BogdansTheme/new_theme',
-        locale: 'en_US',
-        files: [
-            'css/styles-m',
-            'css/styles-l'
-        ],
-        dsl: 'less'
     }
 };

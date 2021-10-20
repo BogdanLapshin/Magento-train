@@ -9,6 +9,7 @@ var config = {
             dataPassing: 'Magento_Theme/js/data-passing',
             jqueryWidget: 'Magento_Theme/js/jquery-widget',
             jqueryWidgetExt: 'Magento_Theme/js/jquery-widget-extending',
+            popupWidget: 'Magento_Theme/js/popup'
         }
     },
     config: {

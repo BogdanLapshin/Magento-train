@@ -22,7 +22,11 @@ var config = {
             },
             'Magento_Theme/js/jquery-widget': {
                 'Magento_Theme/js/jquery-widget-mixin': true
+            },
+            'Magento_Swatches/js/swatch-renderer': {
+                'Magento_Swatches/js/swatch-renderer-mixin': true
             }
+
         }
     }
 }

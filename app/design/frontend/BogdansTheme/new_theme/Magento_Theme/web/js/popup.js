@@ -1,10 +1,15 @@
 define([
     'jquery',
     "Magento_Ui/js/modal/modal",
-    'domReady!'
+    'domReady!',
+    'mage/collapsible'
 ], function ($, modal) {
-
         return function () {
+            $('.swatch-opt').on('click',".swatch-attribute.color",function (event){
+                if(event.target.classList.contains("swatch-attribute-label")){
+                    console.log(event.target.nextSibling.nextSibling.classList.toggle("non-active"));
+                }
+            })
             $('#modal_content').modal({
                 'type': 'popup',
                 'title': 'Popup title',

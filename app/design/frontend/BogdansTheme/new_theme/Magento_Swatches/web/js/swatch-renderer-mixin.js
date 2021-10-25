@@ -1,6 +1,8 @@
-define(["jquery"
+define([
+    "jquery"
 ], function ($) {
     'use strict';
+
     var SwatchRendererWidgetMixin = {
         /**
          * Render swatch options by part of config
@@ -33,7 +35,7 @@ define(["jquery"
                     return;
                 }
 
-                var labelCollapsible = item.label==="Color" ? 'data-role="title"' : '';
+                var labelCollapsible = item.label === "Color" ? 'data-role="title"' : '';
 
                 if ($widget.options.enableControlLabel) {
                     label +=
@@ -52,6 +54,7 @@ define(["jquery"
                 }
 
                 var colorCollapsibleContent = item.code === 'color' ? 'data-role="content"' : '';
+
                 // Create new control
                 container.append(
                     '<div class="' + classes.attributeClass + ' ' + item.code + '" ' +

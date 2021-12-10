@@ -1,0 +1,28 @@
+<div data-block="minicart-content-dropdown"></div>
+<?php if ($block->getIsNeedToDisplaySideBar()) :?>
+    <div class="block block-minicart"
+         data-role="dropdownDialog"
+         data-mage-init='{"dropdownDialog":{
+                "appendTo":"[data-block=minicart-content-dropdown]",
+                "triggerTarget":".showcart",
+                "timeout": "2000",
+                "closeOnMouseLeave": false,
+                "closeOnEscape": true,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "buttons":[]}}'>
+        <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        </div>
+        <?= $block->getChildHtml('minicart.addons') ?>
+    </div>
+<?php else :?>
+
+    <script>
+        require(['jquery'], function ($) {
+            $('a.action.showcart').click(function() {
+                $(document.body).trigger('processStart');
+            });
+        });
+    </script>
+<?php endif ?>

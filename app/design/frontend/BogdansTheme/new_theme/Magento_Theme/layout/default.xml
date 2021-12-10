@@ -9,8 +9,68 @@
         </referenceContainer>
         <referenceContainer name="container-1" remove="true"/>
 
-        <referenceContainer name="page.wrapper">
-            <block class="Magento\Framework\View\Element\Template" name="ui.xml" template="Magento_Theme::ui-xml.phtml">
+
+
+        <referenceContainer name="header.container">
+            <container name="header.menu" label="Menu Header" htmlTag="div" htmlClass="header-menu">
+                <block class="Magento\Framework\View\Element\Template" name="menu.content" template="Magento_Theme::menu.phtml"/>
+                <block class="Magento\Customer\Block\Account\Customer" name="account.item" template="Magento_Customer::customer.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="custom.minicart.wrapper" template="Magento_Theme::custom-minicart-wrapper.phtml"/>
+            </container>
+            <block class="Magento\Customer\Block\Account\Customer" name="custom.account.menu" template="Magento_Customer::custom-account-menu.phtml">
+
+            </block>
+            <block class="Magento\Checkout\Block\Cart\Sidebar" name="custom.minicart.window" template="Magento_Checkout::cart/custom-minicart-window.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="types" xsi:type="array"/>
+                        <item name="components" xsi:type="array">
+                            <item name="minicart_content" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_Checkout/js/view/minicart</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">Magento_Checkout/minicart/content</item>
+                                </item>
+                                <item name="children" xsi:type="array">
+                                    <item name="subtotal.container" xsi:type="array">
+                                        <item name="component" xsi:type="string">uiComponent</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="displayArea" xsi:type="string">subtotalContainer</item>
+                                        </item>
+                                        <item name="children" xsi:type="array">
+                                            <item name="subtotal" xsi:type="array">
+                                                <item name="component" xsi:type="string">uiComponent</item>
+                                                <item name="config" xsi:type="array">
+                                                    <item name="template" xsi:type="string">Magento_Checkout/minicart/subtotal</item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                    <item name="extra_info" xsi:type="array">
+                                        <item name="component" xsi:type="string">uiComponent</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="displayArea" xsi:type="string">extraInfo</item>
+                                        </item>
+                                    </item>
+                                    <item name="promotion" xsi:type="array">
+                                        <item name="component" xsi:type="string">uiComponent</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="displayArea" xsi:type="string">promotion</item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <move element="minicart" destination="custom.minicart.wrapper" before="-" />
+        <move element="header.panel" destination="header.container" before="-" />
+        <move element="top.links" destination="custom.account.menu"/>
+
+
+        <block class="Magento\Framework\View\Element\Template" name="ui.xml" template="Magento_Theme::ui-xml.phtml">
                 <arguments>
                     <argument name="jsLayout" xsi:type="array">
                         <item name="components" xsi:type="array">
@@ -24,7 +84,6 @@
                     </argument>
                 </arguments>
             </block>
-        </referenceContainer>
 
         <referenceBlock name="minicart">
             <arguments>
@@ -39,8 +98,10 @@
                     </item>
                 </argument>
             </arguments>
-
         </referenceBlock>
+
+
+<!--        <move element="minicart" destination="header.container" before="-" />-->
 
     </body>
 </page>
